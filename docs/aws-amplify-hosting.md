@@ -33,18 +33,34 @@ Amplify should use the repository-root [`amplify.yml`](../amplify.yml) file.
 Build summary:
 
 - App root: `web`
+- Node runtime: Node 20 via `nvm install 20` and `nvm use 20`
+- Python runtime: Python 3.11 expected in the Amplify build image
 - Install command: `npm ci`
 - Build command: `npm run build`
 - Build output: `web/build`
 - `BASE_PATH`: leave unset for AWS root hosting
 
+Amplify owns the production build/deploy pipeline. Pushes to the connected
+`main` branch should trigger an Amplify build from `web/` and publish the
+resulting static files from `web/build`.
+
 Required Amplify environment variables:
 
+- `AMPLIFY_MONOREPO_APP_ROOT=web`
 - `PUBLIC_SUPABASE_URL`
 - `PUBLIC_SUPABASE_PUBLISHABLE_KEY`
 
 Do not add Supabase service-role secrets to Amplify for the static frontend.
 Server/admin Supabase keys remain for CI or local maintenance workflows only.
+
+No GitHub Actions AWS secrets or OIDC role are required for the Amplify-native
+pipeline. The AWS-side integration is the Amplify GitHub App connection, which
+needs access to this repository so Amplify can create webhooks and receive push
+events.
+
+The legacy GitHub Pages workflow at
+`.github/workflows/deploy-pages.yml` is manual-only and is superseded by
+Amplify for production deploys.
 
 ## Served Files
 
