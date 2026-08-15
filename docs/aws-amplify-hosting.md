@@ -162,4 +162,5 @@ The scan should return no matches.
 5. Leave `BASE_PATH` unset.
 6. Add the custom domain `gsc.athbheochan.irish` in Amplify.
 7. Deploy the branch and record both the Amplify HTTPS URL and production domain.
-8. Smoke test the deployed site with issue #169.
+8. Smoke test the deployed site with issue #169 and record results in
+   [`aws-amplify-smoke-test.md`](aws-amplify-smoke-test.md).
