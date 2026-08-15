@@ -164,7 +164,7 @@ function parseGame(game: unknown): GameStatus {
 				: undefined,
 			repo: asString(value.repo_url) || undefined,
 			notes: asString(value.notes_path) ? withBase(asString(value.notes_path)) : undefined,
-			strings: withBase(`/games/${asString(value.console)}/${asString(value.id)}/strings`),
+			strings: withBase(`/games/${asString(value.console)}/${asString(value.id)}/strings/`),
 			issues: asString(value.issues_url)
 				? `${asString(value.issues_url)}?q=${encodeURIComponent(`is:issue ${asString(value.id)}`)}`
 				: undefined
@@ -201,7 +201,7 @@ export async function fetchStatus(fetchFn: typeof fetch): Promise<SiteStatus> {
 }
 
 export function getGameHref(game: Pick<GameStatus, 'console' | 'game'>): string {
-	return withBase(`/games/${game.console}/${game.game}`);
+	return withBase(`/games/${game.console}/${game.game}/`);
 }
 
 export function getStateMeta(state: GameState): { label: string; className: string } {

@@ -43,7 +43,7 @@
 	let { data }: PageProps = $props();
 	let remoteGame = $state<typeof data.game | null>(null);
 	const game = $derived(remoteGame ?? data.game);
-	const detailHref = $derived(`${base}/games/${game.console}/${game.game}`);
+	const detailHref = $derived(`${base}/games/${game.console}/${game.game}/`);
 	const summaryText = $derived(
 		`${game.categories.reduce((sum, category) => sum + category.translated, 0)} / ${game.categories.reduce((sum, category) => sum + category.total, 0)} aistrithe · ${game.progress}%`,
 	);

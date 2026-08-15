@@ -61,10 +61,10 @@
 				<a class="font-mono text-[0.72rem] tracking-[0.12em] text-console-muted hover:text-console-green" href={base || '/'}>
 					CLUICHÍ
 				</a>
-				<a class="font-mono text-[0.72rem] tracking-[0.12em] text-console-muted hover:text-console-green" href={`${base}/guide`}>
+				<a class="font-mono text-[0.72rem] tracking-[0.12em] text-console-muted hover:text-console-green" href={`${base}/guide/`}>
 					TREORACHA
 				</a>
-				<a class="font-mono text-[0.72rem] tracking-[0.12em] text-console-muted hover:text-console-green" href={`${base}/contribute`}>
+				<a class="font-mono text-[0.72rem] tracking-[0.12em] text-console-muted hover:text-console-green" href={`${base}/contribute/`}>
 					RANNÍOCAÍOCHT
 				</a>
 				<ExternalLink
