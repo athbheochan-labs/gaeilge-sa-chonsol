@@ -137,7 +137,7 @@ def find_notes_path(game: GameDefinition) -> str | None:
     short_name = game.key.split(".", 1)[1]
     candidate = REPO_ROOT / "web" / "src" / "routes" / "games" / game.console / short_name / "notes" / "+page.md"
     if candidate.exists():
-        return f"/games/{game.console}/{short_name}/notes"
+        return f"/games/{game.console}/{short_name}/notes/"
     return None
 
 

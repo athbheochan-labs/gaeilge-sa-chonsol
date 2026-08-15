@@ -59,7 +59,7 @@
 			</p>
 			<div class="mt-8 flex flex-wrap gap-4">
 				<a class="console-button console-button-primary" href="#games">Faigh an paiste</a>
-				<a class="console-button console-button-ghost" href={`${base}/guide`}>Treoir &rarr;</a>
+				<a class="console-button console-button-ghost" href={`${base}/guide/`}>Treoir &rarr;</a>
 			</div>
 		</div>
 
