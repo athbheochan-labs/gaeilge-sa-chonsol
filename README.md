@@ -177,3 +177,10 @@ SUPABASE_URL=... SUPABASE_SERVICE_KEY=... python3 scripts/seed_supabase_from_csv
 There is also a manual GitHub Actions workflow at
 [`seed-supabase-strings.yml`](/home/aaronsinnott/Documents/projects/romhacks/gaeilge-sa-chonsol/.github/workflows/seed-supabase-strings.yml:1)
 for the initial import.
+
+## AWS Hosting
+
+The AWS migration targets Amplify Hosting for the static SvelteKit frontend.
+See [docs/aws-amplify-hosting.md](/home/aaronsinnott/Documents/projects/romhacks/gaeilge-sa-chonsol/docs/aws-amplify-hosting.md:1)
+for the target hosting setup, build settings, served static files, and
+provisioning checklist.
